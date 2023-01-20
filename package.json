@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
+    "test:ci": "jest --ci",
     "release:patch": "git tag -l | xargs git tag -d && npm version patch && git push origin && git push origin --tags",
     "release:minor": "git tag -l | xargs git tag -d && npm version minor && git push origin && git push origin --tags",
     "release:major": "git tag -l | xargs git tag -d && npm version major && git push origin && git push origin --tags",
