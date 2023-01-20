@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "release:patch": "git tag -l | xargs git tag -d && npm version patch && git push origin && git push origin --tags",
+    "release:minor": "git tag -l | xargs git tag -d && npm version minor && git push origin && git push origin --tags",
+    "release:major": "git tag -l | xargs git tag -d && npm version major && git push origin && git push origin --tags",
+    "release:beta": "git tag -l | xargs git tag -d && npm version prerelease --preid=beta && git push origin && git push origin --tags"
   },
   "dependencies": {
     "react": "18.2.0",
